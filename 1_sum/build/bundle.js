@@ -63,11 +63,25 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var image = document.createElement('img');
+image.src = 'http://placekitten.com/200/300';
+
+console.log(document);
+console.log(document.body);
+document.body.appendChild(image);
+
+/***/ },
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83,19 +97,23 @@ var sum = function sum(a, b) {
 exports.default = sum;
 
 /***/ },
-/* 1 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _sum = __webpack_require__(0);
+var _sum = __webpack_require__(1);
 
 var _sum2 = _interopRequireDefault(_sum);
+
+__webpack_require__(0);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var total = (0, _sum2.default)(5, 5);
+// No code to execute. We just want to tell webpack to add it to our bundle.js
+
 console.log('total: ' + total);
 
 /***/ }
