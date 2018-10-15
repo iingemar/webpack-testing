@@ -60,10 +60,10 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "build/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -75,14 +75,24 @@
 
 __webpack_require__(2);
 
+var _big = __webpack_require__(3);
+
+var _big2 = _interopRequireDefault(_big);
+
+var _small = __webpack_require__(4);
+
+var _small2 = _interopRequireDefault(_small);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 // All non js should have the file extension
-
 var image = document.createElement('img');
-image.src = 'http://placekitten.com/200/300';
-
-console.log(document);
-console.log(document.body);
+image.src = _small2.default;
 document.body.appendChild(image);
+
+var bigImage = document.createElement('img');
+bigImage.src = _big2.default;
+document.body.appendChild(bigImage);
 
 /***/ },
 /* 1 */
@@ -108,6 +118,18 @@ exports.default = sum;
 
 /***/ },
 /* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "c66ff0c6165357c971b78c694da98fbb.jpeg";
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gNjUK/9sAhAAIBgYHBgUIBwcHCQkICgwUDQwLCwwZEhMPFB0aHx4dGhwcICQuJyAiLCMcHCg3KSwwMTQ0NB8nOT04MjwuMzQyAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wgARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBv/aAAgBAQAAAAB+xqH/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/9oACAECEAAAAE//xAAUAQEAAAAAAAAAAAAAAAAAAAAC/9oACAEDEAAAAD//xAAjEAACAQEHBQAAAAAAAAAAAAABAgUDAAQGEBEhQRMxY3GB/9oACAEBAAE/ADHVHxBUutXBsKkfqg6pp7uTyH098fbLAxKqAI+7beEWHfL/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPwCP/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAgBAwEBPwB//9k="
+
+/***/ },
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
