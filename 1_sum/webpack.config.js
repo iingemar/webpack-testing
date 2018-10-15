@@ -13,9 +13,21 @@ const config = {
             {
                 use: 'babel-loader',
                 test: /\.js$/,
+            },
+            {
+                // Order is important! Loaders are applied from right to left
+                use: ['style-loader', 'css-loader'],
+                test: /\.css$/,
             }
         ]
     }
 };
+
+// babel-loader: teaches babel how to work with webpack
+// babel-core: know how to take in code, parse it and generate some output files
+// babel-preset-env: rule set for converting ES2015/16/17 to ES5
+
+// css-loader: teach webpack how to import and parse CSS files
+// style-loader: takes CSS and adds them to the HTML document. (Injects them in style tags on head)
 
 module.exports = config;
