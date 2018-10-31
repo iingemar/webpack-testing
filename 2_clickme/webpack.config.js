@@ -24,18 +24,6 @@ const config = {
                     loader: 'css-loader'
                 }),
                 test: /\.css$/,
-            },
-            {
-                test: /\.(jpeg|png|gif|svg)$/,
-                // Order is important! Loaders are applied from right to left
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: { limit: 40000 },
-
-                    },
-                    'image-webpack-loader'
-                ]
             }
         ]
     },
