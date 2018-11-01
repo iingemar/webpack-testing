@@ -25,7 +25,8 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         // Save with the key from the entry section. Ie bundle.js, vendor.js
-        filename: '[name].js'
+        // Chunkhash is a hash of the contents of the file.
+        filename: '[name].[chunkhash].js'
     },
     module: {
         rules: [
@@ -41,9 +42,13 @@ module.exports = {
         ]
     },
     plugins: [
+        // Opt-in feature that creates a separate file (known as a chunk), consisting of common modules
+        // shared between multiple entry points.
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor'
+            name: ['vendor', 'manifest']
         }),
+        // The plugin will generate an HTML5 file for you that includes all your webpack bundles
+        // in the body using script tags.
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         })
