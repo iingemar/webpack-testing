@@ -51,6 +51,11 @@ module.exports = {
         // in the body using script tags.
         new HtmlWebpackPlugin({
             template: 'src/index.html'
+        }),
+        // allows you to create global constants which can be configured at compile time.
+        // node environment
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         })
     ]
 };
